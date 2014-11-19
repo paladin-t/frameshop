@@ -1,0 +1,143 @@
+<style type="text/css">
+.comment {
+	font-size: 12px;
+	font-style: italic;
+}
+.title1 {
+	font-weight: bold;
+	font-size: 24px;
+}
+.title2 {
+	font-weight: bold;
+	font-size: 18px;
+}
+.title3 {
+	font-weight: bold;
+	font-size: 16px;
+}
+</style>
+<title>Frameshop User Guide</title>
+<h1 class="title1">1. Overview</h1>
+<p>Frameshop is a practical WYSIWYG tool for game developers to create texture atlases and frame animations. Considering texture and animation packaging is all along important for game development on each platform, an efficient tool is always profoundly required, Frameshop can meet these requirements well. It runs on Windows only for the moment.</p>
+<hr size="5" />
+<h1 class="title1">2. Main Features</h1>
+<p>&nbsp;&nbsp;&#8226; Texture atlas packaging;</p>
+<p>&nbsp;&nbsp;&#8226; Multi atlas page support;</p>
+<p>&nbsp;&nbsp;&#8226; Atlas frame rotation support;</p>
+<p>&nbsp;&nbsp;&#8226; Atlas frame padding support;</p>
+<p>&nbsp;&nbsp;&#8226; Format conversion plugin system;</p>
+<p>&nbsp;&nbsp;&#8226; Frame animation editing;</p>
+<p>&nbsp;&nbsp;&#8226; Animation helper rectangle data editing.</p>
+<hr size="5" />
+<h1 class="title1">3. Usages</h1>
+<h2 class="title2">3.1 Main Window User Interface</h2>
+<p>The main window appears as below after you started Frameshop; it is composited by five areas.</p>
+<p><img src="manual_files/001.png"/></p>
+<h3 class="title3"><span class="title3">3.1.1 Toolbar</span></h3>
+<p>Toolbar sits at the top, most of the project/texture file operations are done here.</p>
+<h3><span class="title3">3.1.2 Page View</span></h3>
+<p>There is a big &quot;Page&quot; view in the middle of the main window, we can create/remove texture atlas pages and add/remove frames under a page here.</p>
+<p> The checkered picture box shows the content of a page. A page is represented as a folder in a tree view at the left top of the page view; all frames associated in a page are listed under a page folder representation. Page command strip is at the bottom.</p>
+<h3><span class="title3">3.1.3 Inspector View</span></h3>
+<p>Inspector view is as known as  property panel in some other software, all editable properties of a page can be modified with it.</p>
+<h3><span class="title3">3.1.4 Frame List</span></h3>
+<p>Texture assets frames are listed here in preview mode, you can add new ones to the list or remove from it, or pick textures to add to an atlas page.</p>
+<h3><span class="title3">3.1.5 Output Panel</span></h3>
+<p>Runtime status information is shown in the box.</p>
+<h2 class="title2">3.2 Creating a New Package</h2>
+<p>Click the &quot;New&quot; button on the toolbar to create a Frameshop project package, a configuration window will show as below.</p>
+<p><img src="manual_files/002.png"/></p>
+<p>Choose an appropriate resolution for a texture atlas page, after that new created pages will use that specified size as default; the size of each page can be changed independently later.</p>
+<p>Vector texture scale is a factor that will be applied to a .SVG (Scalable Vector Graphics) file at the importing moment.</p>
+<h2 class="title2">3.3 Importing Frames</h2>
+<p>Click the &quot;Add Texture&quot; button on the toolbar to add texture files into working project as assets, or click the &quot;Add Folder&quot; button to add textures inside a folder (<a href="#options_fr">recursively as default</a>). Imported textures will be listed in the frame list. You can also drag and drop a texture file or folder to the frame list to do so.</p>
+<p><img src="manual_files/003.png" width="332" height="375" /></p>
+<h3 class="title3">3.3.1 Supported Formats</h3>
+<p>Frameshop supports five types of texture file as below.</p>
+<p>&nbsp;&nbsp;&#8226; PNG</p>
+<p>&nbsp;&nbsp;&#8226; BMP</p>
+<p>&nbsp;&nbsp;&#8226; JPG</p>
+<p>&nbsp;&nbsp;&#8226; SVG</p>
+<p>&nbsp;&nbsp;&#8226; TGA</p>
+<h2 class="title2">3.4 Adding Frames to a Page</h2>
+<p>To add frame assets into an atlas page, select a target page in the page/frame list to add to, then simply drag them from the frame list and drop to the center page view area; frames can be multi selected while Ctrl key is pressed down. The page/frame list and the page atlas view will be updated immediately when a frame is added. You can double  click on a frame assets to perform adding as well.</p>
+<p><img src="manual_files/004.png" width="1021" height="214" /></p>
+<p>Frameshop neither copies original textures to the project folder nor parse them into project file, it reads original raw texture files each time you open a project. Frameshop saves a relative path if a texture file is under the same disk with a project file; otherwise it saves an absolute path.</p>
+<h2 class="title2">3.5 Saving a Package</h2>
+<p>Click the &quot;Save&quot; button to save a Frameshop project package to disk.</p>
+<p><img src="manual_files/005.png" width="160" height="52" /></p>
+<p>Click the &quot;Save As&quot; button to save current Frameshop project to another path and use that path as the working one.</p>
+<h2 class="title2">3.6 Opening a Package</h2>
+<p>Click the &quot;Open&quot; button to show an open file dialog, and then choose a Frameshop project file to load it. A project file is typed as .FSP; Frameshop can <a href="#options_rf">relate to</a> it so that Frameshop could be launched  automatically when you tried to open a project file directly. You can also drag and drop a project file to the toolbar to do so.</p>
+<hr />
+<h2 class="title2">3.7 Creating a New Page</h2>
+<p>Click the &quot;+&quot; button below the page/frame list in the page view panel to add a new page.</p>
+<h2 class="title2">3.8 Removing a Page</h2>
+<p>Click the &quot;-&quot; button below the page atlas view to remove current page.</p>
+<h2 class="title2">3.9 Removing Frames from a Page</h2>
+<p>Double  click a frame in the page atlas view to remove it. Or right click on a frame item (either in the page/frame list or in the page atlas view) and choose &quot;Remove from Page&quot; to do so.</p>
+<hr />
+<h2 class="title2">3.10 Searching a Texture</h2>
+<p>Pick a single item from the combo box on top of the frame list to show it only in the frame list view. Or type some letters and hit enter to match and filter frames approximately.</p>
+<h2 class="title2">3.11 Editing Page Properties</h2>
+<p>In the inspector view we can edit  properties of a selected page.</p>
+<p><img src="manual_files/006.png" width="300" height="300" /></p>
+<p>A page name is unique in a Frameshop project scope; and it <strong>CANNOT</strong> contains any of these charactors: <em><strong>, . ! ? * : | &lt; &gt; &quot; / \</strong></em>.</p>
+<p>If the &quot;AllowRotation&quot; property is set true, Frameshop might try to rotate a frame when packing it into an atlas to optimize space occupation.</p>
+<p>The &quot;Padding&quot; value will be applied to each frame in a page to make them get a few pixels away from other ones.</p>
+<p>The &quot;TextureSize&quot; specifies a size of current page.</p>
+<p>Modifications of &quot;AllowRotation&quot;, &quot;Padding&quot; and &quot;TextureSize&quot; may cause  atlas relayouting, the page may not be able to hold all packed frames after that relayouting, if so an ensurance dialog box will appear to ask you if you'd like to revert the change or keep it with some frame abandon in current atlas page.</p>
+<hr />
+<h2 class="title2">3.12 Publishing</h2>
+<p>Click the &quot;Publish&quot; button to export current Frameshop project, and make essential conversions at the same folder where the project file stays.</p>
+<h2 class="title2">3.13 Format Conversion Plugins</h2>
+<p>Frameshop supports customized command line tool invoking when publishing a project, so that we can make some format conversions with this functionality.</p>
+<p>See <a href="#options_pe">3.21.1</a> to get detail information about how to customize a conversion plugin.</p>
+<hr />
+<h2 class="title2">3.14 Animation Window User Interface</h2>
+<p>Click the &quot;Animation&quot; button to open the animation editing window which appears as below.</p>
+<p><img src="manual_files/007.png" width="515" height="409" /></p>
+<p>The left side is a page/frame list which shows same contents as the one in the main window. The middle view is  frame preview area. The right side is composited by a sequence list on top and a frame (in sequence) property grid.</p>
+<h2 class="title2">3.15 Creating a New Animation</h2>
+<p>Choose &quot;File&quot; -&gt; &quot;New&quot; to create a new animation sequence.</p>
+<h2 class="title2">3.16 Adding Frames to an Animation Sequence</h2>
+<p>Double  click a frame item in the page/frame list to add it to the sequence. Or right click on an item and choose &quot;Add to Sequence&quot; to do so as well.</p>
+<h2 class="title2">3.17 Modifying Frame Offset in an Animation</h2>
+<p>Click on a frame in the sequence to select it.</p>
+<p>Choose &quot;Edit&quot; -&gt; &quot;Move Mode&quot; to active move mode; then drag the frame in the preview area. Or in another way edit the &quot;Offset&quot; property in the property grid to do a fine adjustment.</p>
+<h2 class="title2">3.18 Modifying Frame Duration in an Animation</h2>
+<p>Click on a frame in the sequence to select it.</p>
+<p>Edit the &quot;Time&quot; property in the property grid.</p>
+<h2 class="title2">3.19 Preview an Animation</h2>
+<p>Choose &quot;Play&quot; -&gt; &quot;Preview&quot; to open the preview window as below.</p>
+<p><img src="manual_files/008.png" width="320" height="240" /></p>
+<p>You must be familiar with this easy to use player style window. Click the triangle button to play, double parallel line button to pause, square button to stop, clip button to switch loop on/off; use the slider bar on the timeline to pick frames.</p>
+<h2 class="title2">3.20 Animation Helper Rectangles</h2>
+<p>Each frame in a sequence can contains three helper rectangles, these rectangles are independent data, you can use them for specific usage such as collision detection or object binding in your engine.</p>
+<p><img src="manual_files/009.png" width="515" height="409" /></p>
+<p>To edit a helper rectangle, follow the steps below.</p>
+<p>Click on a frame in the sequence to select it.</p>
+<p>Choose &quot;Edit&quot; -&gt; &quot;Quad Mode N&quot; to active quad mode; then drag out a rectangle. Or in another way edit the &quot;RectN&quot; property in the property grid to do a fine adjustment. Notice 1, 2 and 3  substitute for &quot;N&quot; here.</p>
+<hr />
+<h2 class="title2"><a name="options"></a>3.21 Options</h2>
+<p>Click the &quot;Option&quot; button on the main window to open the option configuration window. There are two tabs as below.</p>
+<p><img src="manual_files/010.png" width="426" height="243" /></p>
+<p><img src="manual_files/011.png" width="426" height="243" /> </p>
+<h3 class="title3"><a name="options_pe"></a>3.21.1 Post Events</h3>
+<p>Format conversion plugin is a text based file that similar to a system shell processing batch; it doesn't do anything itself, but invokes other command line tools and pass arguments to them.</p>
+<p>Frameshop can use four kinds of plugins that respectively process project folder, each texture, each page data, each animation. Plugins are all located in the &quot;plugin&quot; folder under the same folder where the Frameshop main EXE sits, a plugin is a .FSC file that you can view and edit using any text editor.</p>
+<p>All plugins are listed in each combo box associated to operation types. You can simply choose an exist one to use it to process assuming targets; type an desired new plugin name in the combo box and press the &quot;Edit&quot; button to create a new plugin file.</p>
+<p>The plugin syntax is as simple as a single line parameterized command with escape lexical tokens. Use the escape tokens below to represent published files/folders.</p>
+<p>&nbsp;&nbsp;&#8226; <strong>$FULL$:</strong> full path</p>
+<p>&nbsp;&nbsp;&#8226; <strong>$PARENT$:</strong> parent folder</p>
+<p>&nbsp;&nbsp;&#8226; <strong>$FILE$:</strong> file name only</p>
+<p>&nbsp;&nbsp;&#8226; <strong>$EXT$:</strong> file extension only</p>
+<h3 class="title3"><a name="options_rf"></a>3.21.2 Relate Frameshop Project File Type</h3>
+<p>Open the options configuration window, switch to the &quot;Misc&quot; tab.</p>
+<p>Check/uncheck &quot;Relate Frameshop project (*.fsp) files&quot; to relate/unrelate project files to Frameshop. You can double click a .FSP file to open it after it's related.</p>
+<h3 class="title3"><a name="options_eb"></a>3.21.3 Ensure Before Removing a Frame</h3>
+<p>Open the options configuration window, switch to the &quot;Misc&quot; tab.</p>
+<p>Check &quot;Ensure before removing a frame&quot; to show an insurance dialog after you were tending to remove a frame from the assets list.</p>
+<h3 class="title3"><a name="options_fr"></a>3.21.4 Add Texture Folders Recursively</h3>
+<p>Open the options configuration window, switch to the &quot;Misc&quot; tab.</p>
+<p>Check &quot;Add texture folders recursively&quot; to parse all sub folders when parsing an outer one.</p>

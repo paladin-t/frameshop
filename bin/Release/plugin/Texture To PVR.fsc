@@ -1,0 +1,1 @@
+PVRTexTool -f PVRTC4 -i "$PARENT$\$FILE$$EXT$" -o "$PARENT$\$FILE$.pvr"
