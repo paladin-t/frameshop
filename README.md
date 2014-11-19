@@ -1,17 +1,20 @@
-1. Overview
+Frameshop
+------------
+
+###Overview
 Frameshop is a practical WYSIWYG tool for game developers to create texture atlases and frame animations. Considering texture and animation packaging is all along important for game development on each platform, an efficient tool is always profoundly required, Frameshop can meet these requirements well. It runs on Windows only for the moment.
 
-2. Main Features
-  • Texture atlas packaging;
-  • Multi atlas page support;
-  • Atlas frame rotation support;
-  • Atlas frame padding support;
-  • Format conversion plugin system;
-  • Frame animation editing;
-  • Animation helper rectangle data editing.
+###Main Features
+* Texture atlas packaging;
+* Multi atlas page support;
+* Atlas frame rotation support;
+* Atlas frame padding support;
+* Format conversion plugin system;
+* Frame animation editing;
+* Animation helper rectangle data editing.
 
-3. Folder Structure
-  • bin/Release: the executable.
+###Folder Structure
+* bin/Release: the executable.
   
-4. TODO
-  • Add parser code.
+###TODO
+* Add parser code.
